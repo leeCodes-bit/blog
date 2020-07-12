@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Post;
+use App\Post;   
+use DB;
 
 class PostsController extends Controller
 {
@@ -14,7 +15,12 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        // $posts= Post::all(); 
+        // $posts = DB::select('SELECT * FROM posts') ;
+        // $posts= Post::orderBy('title', 'desc')->take(1)->get(); //takes 1 post at a time //eloquoent method
+        // $posts= Post::orderBy('title', 'desc')->get(); 
+
+        $posts= Post::orderBy('title', 'desc')->paginate(1); 
         return view('posts.index')->with('posts', $posts);
     }
 
