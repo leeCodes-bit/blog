@@ -16,5 +16,6 @@ Route::get('/blog', 'PagesController@blog');
 Route::get('/login', 'PagesController@login');
 Route::get('/signup', 'PagesController@signup');
 Route::get('/contact', 'PagesController@contact');
-Route::resource('posts', 'PostsController');
+// Route::post('/store', 'PagesController@store')->name('posts.store');
+Route::resource('/posts', 'PostsController');
 

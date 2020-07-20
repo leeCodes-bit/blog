@@ -5,7 +5,8 @@
       <a class="p-2 text-dark" href="./contact">Contact</a>
       <a class="p-2 text-dark" href="./posts">Blog</a>
       <a class="p-2 text-dark" href="./login">Login</a>
+    <a class="p-2 text-dark" href="./signup">Sign up</a>
     </nav>
-    <a class="btn btn-outline-primary" href="./signup">Sign up</a>
+    <a href="{{ route('posts.create')}}" class="btn btn-success btn-sm ">Add Post</a>
   </div>
 
